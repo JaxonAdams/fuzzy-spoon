@@ -1,10 +1,14 @@
-.container {
-    background-color: #2A9D8F;
+.container, .container div {
+    background-color: #264653;
+    color: #f1f1f1;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .homeIcon {
     margin: 0 0.5rem;
+    color: #E76F51;
 }
 
 .homeLink,
@@ -13,4 +17,9 @@
     padding: 1rem;
     display: flex;
     align-items: flex-start;
+}
+
+.aboutLinkContainer {
+    padding: 0 2rem;
+    font-size: 1.2rem;
 }
