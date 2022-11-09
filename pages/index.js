@@ -1,19 +1,23 @@
 import Head from 'next/head';
 import { useState, useEffect } from 'react';
 
-import { formatDate } from '../utils/formatDate';
+import { formatDate, formatTime } from '../utils/formatDate';
 import styles from '../styles/Home.module.css';
 
 export default function Home() {
   const [currentDateObj, setCurrentDateObj] = useState({});
 
-  useEffect(() => console.log(getCurrentDate()), []);
+  useEffect(() => {
+    setInterval(getCurrentDate, 1000);
+  }, []);
 
   const getCurrentDate = () => {
     const date = new Date();
-    const formattedDate = formatDate(date);
 
-    return { date: formattedDate };
+    const formattedDate = formatDate(date);
+    const formattedTime = formatTime(date);
+
+    setCurrentDateObj({ ...currentDateObj, date: formattedDate, time: formattedTime });
   };
   
   return (
@@ -23,8 +27,8 @@ export default function Home() {
       </Head>
     
       <div className={styles.dateContainer}>
-        <h2 className={styles.date}>November 07, 2022</h2>
-        <h1 className={styles.time}>8:00 PM</h1>
+        <h2 className={styles.date}>{currentDateObj && currentDateObj.date}</h2>
+        <h1 className={styles.time}>{currentDateObj && currentDateObj.time}</h1>
       </div>
     </div>
   )
