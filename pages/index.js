@@ -1,5 +1,8 @@
 import Head from 'next/head';
+import Link from 'next/link';
 import { useState, useEffect } from 'react';
+
+import LinkCard from '../components/LinkCard';
 
 import { formatDate, formatTime } from '../utils/formatDate';
 import styles from '../styles/Home.module.css';
@@ -27,8 +30,18 @@ export default function Home() {
       </Head>
     
       <div className={styles.dateContainer}>
+        <h2 className={styles.intro}>Today is...</h2>
         <h2 className={styles.date}>{currentDateObj && currentDateObj.date}</h2>
         <h1 className={styles.time}>{currentDateObj && currentDateObj.time}</h1>
+      </div>
+
+      <div className={styles.flexRow}>
+        <Link href='#' className={styles.link}>
+          <LinkCard location='notes' />
+        </Link>
+        <Link href='#' className={styles.link}>
+          <LinkCard location='calendar' />
+        </Link>
       </div>
     </div>
   )
