@@ -8,10 +8,21 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
+  box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+  border-radius: 18px;
 }
 
 .dateContainer h1, .dateContainer h2 {
   margin: 0.5rem;
+}
+
+.intro {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 1.4rem;
+  margin: 0;
+  padding: 0;
 }
 
 .date {
@@ -20,4 +31,11 @@
 
 .time {
   font-size: 3rem;
+}
+
+.flexRow {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
 }
