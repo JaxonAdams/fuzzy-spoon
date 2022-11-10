@@ -30,3 +30,9 @@
     font-size: 6rem;
     color: #E76F51;
 }
+
+@media screen and (max-width: 380px) {
+    .card {
+        min-width: 270px;
+    }
+}

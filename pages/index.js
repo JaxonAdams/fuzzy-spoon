@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 
 import LinkCard from '../components/LinkCard';
+import Footer from '../components/Footer';
 
 import { formatDate, formatTime } from '../utils/formatDate';
 import styles from '../styles/Home.module.css';
@@ -43,6 +44,8 @@ export default function Home() {
           <LinkCard location='calendar' />
         </Link>
       </div>
+
+      <Footer />
     </div>
   )
 }

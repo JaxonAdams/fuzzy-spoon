@@ -23,3 +23,18 @@
     padding: 0 2rem;
     font-size: 1.2rem;
 }
+
+@media screen and (max-width: 480px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .homeLink, .title {
+        font-size: 1.5rem;
+        padding: 1rem 0.5rem;
+    }
+
+    .aboutLinkContainer {
+        padding: 1rem;
+    }
+}
