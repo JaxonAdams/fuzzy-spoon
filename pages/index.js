@@ -37,7 +37,7 @@ export default function Home() {
       </div>
 
       <div className={styles.flexRow}>
-        <Link href='#' className={styles.link}>
+        <Link href='/notes' className={styles.link}>
           <LinkCard location='notes' />
         </Link>
         <Link href='#' className={styles.link}>

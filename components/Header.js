@@ -15,7 +15,7 @@ const Header = () => {
                 <h1 className={styles.title}>Welcome Jaxon!</h1>
             </div>
             <nav className={styles.nav}>
-                <Link href='#'>
+                <Link href='/notes'>
                     <JournalBookmarkFill className={styles.iconLink} />
                 </Link>
                 <Link href='#'>
